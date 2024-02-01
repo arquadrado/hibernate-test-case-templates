@@ -17,19 +17,6 @@ import java.util.Objects;
 import java.util.Optional;
 
 
-/**
- * The persistent class for the PROFILES database table.
- * <p>
- * Watch cout:
- * <pre><code>
- *     SELECT p.PROFILEID,p.PROFILENAME,a.PROFILEVALUE AS commonDisplayName
- * FROM PROFILES p
- * LEFT OUTER JOIN PROFILE_ATTRIBUTES a ON a.PROFILEID = p.PROFILEID AND a.PROFILEKEY = 'common.displayname'
- * WHERE p.PROFILEID IN ('99990te_777a7110-4e53-4fda-b2ab-5b57d5cdbf61','99990te_3b94afd8-69d8-435f-b3e8-d178e4ec7029')
- * </code></pre>
- * <p>
- * The profilename is a profilekey and not name.
- */
 @Entity
 @Table(name = "PROFILES")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
