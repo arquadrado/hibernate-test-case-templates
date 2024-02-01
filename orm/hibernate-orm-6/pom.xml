@@ -10,7 +10,7 @@
 	<properties>
 		<version.com.h2database>2.2.224</version.com.h2database>
 		<version.junit>4.13.2</version.junit>
-		<version.org.hibernate>6.4.2.Final</version.org.hibernate>
+		<version.org.hibernate>6.2.22.Final</version.org.hibernate>
 	</properties>
 
 	<dependencies>
@@ -35,7 +35,13 @@
 			<artifactId>junit</artifactId>
 			<version>${version.junit}</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
